@@ -2,7 +2,7 @@
 ![Build Status](https://travis-ci.org/cnproxy/shadowsocks-kcptun.svg?branch=master)
 
 #### Usage
-mkdir -p ~/.docker/shadowsocks-kcptun/supervisor
+mkdir -p ~/.docker/shadowsocks-kcptun/supervisor  
 mkdir -p ~/.docker/shadowsocks-kcptun/shadowsocks
 
 vi ~/.docker/shadowsocks-kcptun/shadowsocks/shadowsocks.json
