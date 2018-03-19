@@ -18,7 +18,7 @@ RUN apk upgrade --update \
     && rm -rf kcptun-linux-amd64-${KCP_VERSION}.tar.gz                                                                                                                  
                                                                                                                                                                         
 ADD supervisord.conf /etc/
-ADD shadowsocks.conf /etc/supervisor/conf.d/
+ADD shadowsocks.conf /etc/supervisor/
 
 VOLUME ["/etc/supervisor/conf.d", "/etc/shadowsocks"]
                                                                                                                                                              
