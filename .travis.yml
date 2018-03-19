@@ -6,7 +6,8 @@ services:
 
 before_install:
   - docker info
-  - docker build -f X86/8/utc/144b01/standard/jdk/Dockerfile -t tomaer/oracle-java:8-edge-utc-144b01-standard-jdk .
+  - docker build -f Dockerfile -t cnproxy/shadowsocks-kcptun:1.0 .
+  - docker build -f Dockerfile -t cnproxy/shadowsocks-kcptun .
 
 script:
   - docker images
@@ -14,5 +15,6 @@ script:
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
       docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-      docker push tomaer/oracle-java:8-edge-gmt8-aliyun-131b11-unlimited-server-jre
+      docker push cnproxy/shadowsocks-kcptun:1.0
+      docker push cnproxy/shadowsocks-kcptun
     fi
