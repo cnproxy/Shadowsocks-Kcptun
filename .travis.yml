@@ -6,8 +6,8 @@ services:
 
 before_install:
   - docker info
-  - docker build -f Dockerfile -t cnproxy/shadowsocks-kcptun:1.0 .
-  - docker build -f Dockerfile -t cnproxy/shadowsocks-kcptun .
+  - docker build -t cnproxy/shadowsocks-kcptun:1.0 .
+  - docker build -t cnproxy/shadowsocks-kcptun .
 
 script:
   - docker images
@@ -15,6 +15,6 @@ script:
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
       docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-      docker push cnproxy/shadowsocks-kcptun:1.0
-      docker push cnproxy/shadowsocks-kcptun
+      docker push cnproxy/shadowsocks-kcptun:1.0;
+      docker push cnproxy/shadowsocks-kcptun;
     fi
