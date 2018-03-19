@@ -1,5 +1,5 @@
 # Shadowsocks-Kcptun
-[![Build Status](https://travis-ci.org/cnproxy/shadowsocks-kcptun.svg?branch=master)](https://travis-ci.org/cnproxy/shadowsocks-kcptun) ![](https://travis-ci.org/cnproxy/shadowsocks-kcptun.svg?branch=master)
+![Build Status](https://travis-ci.org/cnproxy/shadowsocks-kcptun.svg?branch=master)
 
 #### Usage
 
