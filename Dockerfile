@@ -9,7 +9,7 @@ WORKDIR /opt/shadowsocks-kcptun
 
 RUN apk upgrade --update \
     && apk add bash curl python python-dev py-pip supervisor && rm -rf /tmp/* /var/cache/apk/* \
-    && pip install --upgrade pip && pip install shadowsocks \
+    && pip install --upgrade pip && pip install git+https://github.com/shadowsocks/shadowsocks.git@master \
     && mkdir -p /etc/shadowsocks/ \
     && curl -sSLO ${KCP_DOWNLOAD_URL} \
     && tar -zxf kcptun-linux-amd64-${KCP_VERSION}.tar.gz \
