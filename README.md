@@ -20,6 +20,13 @@ vi ~/.docker/shadowsocks-kcptun/shadowsocks/shadowsocks.json
 }
 ```
 
+vi ~/.docker/shadowsocks-kcptun/supervisor/shadowsocks.conf
+```
+[program:shadowsocks]
+command=ssserver -c /etc/shadowsocks/shadowsocks.json
+user=root
+```
+
 ```
 docker run --privileged --name shadowsocks --restart=unless-stopped \
     -p 8888-8898:8888-8898 -p 18888-18898:18888-18898/udp \
